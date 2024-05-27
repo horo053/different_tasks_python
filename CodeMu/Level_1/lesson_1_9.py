@@ -1,17 +1,17 @@
 #9.1. Дана строка: 'abcdef'. Получите три последних символа этой строки: 'def'
-def threeLetter(listStr):
-    print(listStr[3:])
+def threeLetter(list_str):
+    print(list_str[3:])
 
-listStr = 'abcdef'
-threeLetter(listStr)
+list_str = 'abcdef'
+threeLetter(list_str)
 
 
 print()
 #9.2. Дан словарь с числами: {'a': 1,'b': 2,'c': 3, 'd': 4}. Увеличьте каждое число из словаря в 2 раза
-def dictValue(listStr):
-    for key in listStr:
-        listStr[key] *= 2
-    print(listStr)
+def dictValue(list_str):
+    for key in list_str:
+        list_str[key] *= 2
+    print(list_str)
 
-dictInt = {'a': 1,'b': 2,'c': 3, 'd': 4}
-dictValue(dictInt)
+dict_int = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+dictValue(dict_int)

@@ -1,61 +1,61 @@
 #2.1. Дан список с числами. Подсчитайте количество отрицательных чисел в этом списке.
-def countNegativeNumber(countNeg):
-    countNum=0
-    for n in countNeg:
-        if n < 0: countNum += 1
-    print(countNum)
+def countNegativeNumber(count_neg):
+    count_num=0
+    for n in count_neg:
+        if n < 0: count_num += 1
+    print(count_num)
 
-listInt = [-1,4,35,-654,-446]
-countNegativeNumber(listInt)
+list_int = [-1, 4, 35, -654, -446]
+countNegativeNumber(list_int)
 
 
 print()
 #2.2. Дан список с числами. Оставьте в нем только положительные числа.
-def listPositiveNum(listPositive):
-    need_items = [item for item in listPositive if item < 0]
+def listPositiveNum(list_positive):
+    need_items = [item for item in list_positive if item < 0]
     print(need_items)
 
-listPositiveNum(listInt)
+listPositiveNum(list_int)
 
 
 print()
 #2.3. Дана строка. Удалите предпоследний символ из этой строки.
-def delStrSymbol(delStr):
-    listStr = list(delStr)
-    listStr.pop(-1)
-    print(''.join(listStr))
+def delStrSymbol(del_str):
+    list_str = list(del_str)
+    list_str.pop(-1)
+    print(''.join(list_str))
 
-delStr = 'asdfgh'
-delStrSymbol(delStr)
+del_str = 'asdfgh'
+delStrSymbol(del_str)
 
 
 print()
 #2.4. Дан список со строками. Оставьте в этом списке только те строки, которые заканчиваются на .html.
-def htmlStr(htmlS):
-    listWithHtml = [el for el in htmlS if el.endswith('.html')]
-    print(listWithHtml)
+def htmlStr(html_s):
+    list_with_html = [el for el in html_s if el.endswith('.html')]
+    print(list_with_html)
 
-listStrHtml = ['fdgdgr.html','dfgg.grhr','xcvbvcn.html','tfhtffh']
-htmlStr(listStrHtml)
+list_str_html = ['fdgdgr.html', 'dfgg.grhr', 'xcvbvcn.html', 'tfhtffh']
+htmlStr(list_str_html)
 
 
 print()
 #2.5. Дан список с дробями: [1.456, 2.125, 3.32, 4.1, 5.34]
-def roundFloat(listFloat):
+def roundFloat(list_float):
     l = 0
-    while l < len(listFloat):
-        listFloat[l] = round(listFloat[l],1)
+    while l < len(list_float):
+        list_float[l] = round(list_float[l], 1)
         l += 1
-    print(listFloat)
+    print(list_float)
 
-listFloat = [1.456, 2.125, 3.32, 4.1, 5.34]
-roundFloat(listFloat)
+list_float = [1.456, 2.125, 3.32, 4.1, 5.34]
+roundFloat(list_float)
 
 
 print()
 #2.6. Дан словарь: {'a': 1,'b': 2,'c': 3, 'd': 4}. Получите список его значений: [1, 2, 3, 4]
-def dictInList(dictForList):
-    print(list(dictForList.values()))
+def dictInList(dict_for_list):
+    print(list(dict_for_list.values()))
 
-dictForList = {'a': 1,'b': 2,'c': 3, 'd': 4}
-dictInList(dictForList)
+dict_for_list = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+dictInList(dict_for_list)

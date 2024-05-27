@@ -49,9 +49,9 @@ countNumber(d)
 
 print()
 #2.5. Даны два числа. Проверьте, что первые цифры этих чисел совпадают.
-def oneNumber(onOne, onTwo):
-    if str(abs(onOne))[0] == str(abs(onTwo))[0]: print(f"Первые цифры чисел {onOne} и {onTwo} совпадают, и равны {str(abs(onOne))[0]}")
-    else: print(f"Первые цифры чисел {onOne} и {onTwo} не совпадают")
+def oneNumber(on_one, on_two):
+    if str(abs(on_one))[0] == str(abs(on_two))[0]: print(f"Первые цифры чисел {on_one} и {on_two} совпадают, и равны {str(abs(on_one))[0]}")
+    else: print(f"Первые цифры чисел {on_one} и {on_two} не совпадают")
 
 e,f,j,h = 512,59635,1023,4015
 oneNumber(e,f)
@@ -60,8 +60,8 @@ oneNumber(j,h)
 
 print()
 #2.5. Дан список:[1, 2, 3, 4, 5, 6]. Получите из него следующий срез: [1, 2, 3]. То есть получить первые 3 элемента списка
-def srez(listS):
-    print(listS[0:3])
+def srez(list_s):
+    print(list_s[0:3])
 
-listS = [1, 2, 3, 4, 5, 6]
-srez(listS)
+list_s = [1, 2, 3, 4, 5, 6]
+srez(list_s)

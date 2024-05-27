@@ -47,11 +47,11 @@ chetNum(d)
 
 print()
 #1.5. Даны два слова. Проверьте, что первые буквы этих слов совпадают.
-def oneLatter(oneL, twoL):
-    if len(oneL) == 0 or len(twoL) == 0: print("Слова не переданы")
+def oneLatter(one_l, two_l):
+    if len(one_l) == 0 or len(two_l) == 0: print("Слова не переданы")
     else:
-        if oneL[0] == twoL[0]: print(f"Первые буквы у слова {oneL} и слова {twoL} одинаковые")
-        else: print(f"Первые буквы у слова {oneL} и слова {twoL} разные")
+        if one_l[0] == two_l[0]: print(f"Первые буквы у слова {one_l} и слова {two_l} одинаковые")
+        else: print(f"Первые буквы у слова {one_l} и слова {two_l} разные")
 
 h,i = "Python", "Java"
 j,k = "Игра", "Икра"

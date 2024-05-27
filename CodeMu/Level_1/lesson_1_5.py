@@ -32,17 +32,17 @@ sumNechetOneToHundred(100)
 
 print()
 #5.4. Даны два целых числа. Найдите остаток от деления первого числа на второе.
-def remainderOfTheDiv(chOne,chTwo):
-    print(chOne%chTwo)
+def remainderOfTheDiv(ch_one, ch_two):
+    print(ch_one % ch_two)
 
-chOne,chTwo = 19,4
-remainderOfTheDiv(chOne,chTwo)
+ch_one,ch_two = 19,4
+remainderOfTheDiv(ch_one, ch_two)
 
 
 print()
 #5.5. Дан список:[1, 2, 3, 4, 5, 6]. Получите из него каждый второй элемент:[1, 3, 5]
-def twoElemList(listTwoElem):
-    print(listTwoElem[::2])
+def twoElemList(list_two_elem):
+    print(list_two_elem[::2])
 
-listTwoElem = [1, 2, 3, 4, 5, 6]
-twoElemList(listTwoElem)
+list_two_elem = [1, 2, 3, 4, 5, 6]
+twoElemList(list_two_elem)

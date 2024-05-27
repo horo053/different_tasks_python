@@ -1,25 +1,25 @@
 #7.1. Дан словарь: {'a': 1,'b': 2,'c': 3,'d': 4,}. Найдите сумму элементов этого словаря.
 def sumDictValue(value):
     l = 0
-    listD = list(value.values())
-    for n in listD:
+    list_d = list(value.values())
+    for n in list_d:
         l += n
     print(l)
 
-dictVal = {'a': 1,'b': 2,'c': 3,'d': 4,}
-sumDictValue(dictVal)
+dict_val = {'a': 1, 'b': 2, 'c': 3, 'd': 4, }
+sumDictValue(dict_val)
 
 
 print()
 #7.2. Дан словарь:{'a': 1,'b': 2,'c': 3,'d': 4,}. Найдите сумму квадратов элементов этого словаря.
-def sumDictValueQtr(valueQtr):
+def sumDictValueQtr(value_qtr):
     l = 0
-    listD = list(valueQtr.values())
-    for n in listD:
+    list_d = list(value_qtr.values())
+    for n in list_d:
         l += n**2
     print(l)
 
-sumDictValueQtr(dictVal)
+sumDictValueQtr(dict_val)
 
 
 print()
@@ -27,37 +27,37 @@ print()
 def listLatter(latter):
     print(list(latter))
 
-strLatter = 'abcde'
-listLatter(strLatter)
+str_latter = 'abcde'
+listLatter(str_latter)
 
 
 print()
 #7.4. Дано некоторое число:12345. Получите список цифр этого числа.
-def listInt(intList):
-    print(list(str(intList)))
+def listInt(int_list):
+    print(list(str(int_list)))
 
-intNum = 12345
-listInt(intNum)
+int_num = 12345
+listInt(int_num)
 
 
 print()
 #7.5. Дано некоторое число:12345. Переверните его:
-def recersInt(intRevers):
-    strInt = str(intRevers)
-    revStr = strInt[::-1]
-    revInt = int(revStr)
-    print(revInt)
+def recersInt(int_revers):
+    str_int = str(int_revers)
+    rev_str = str_int[::-1]
+    rev_int = int(rev_str)
+    print(rev_int)
 
-recersInt(intNum)
+recersInt(int_num)
 
 
 print()
 #7.6. Дано некоторое число:12345. Найдите сумму цифр этого числа.
-def sumNum(intNum):
+def sumNum(int_num):
     k = 0
-    while intNum > 0:
-        k += intNum%10
-        intNum = intNum//10
+    while int_num > 0:
+        k += int_num % 10
+        int_num = int_num // 10
     print(k)
 
-sumNum(intNum)
+sumNum(int_num)
