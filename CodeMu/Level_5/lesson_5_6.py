@@ -5,8 +5,8 @@ def emailTrue(email):
     is_valid = pattern.match(email)
     print(is_valid is not None)
 
-#email = input("Введите свой email: ")
-#emailTrue(email)
+email = input("Введите свой email: ")
+emailTrue(email)
 
 
 #6.2. Попросите пользователя ввести дату в формате год-месяц-день. Определите, была уже дата в текущем году.
@@ -18,8 +18,8 @@ def datePastTrue(date_past):
         elif datetime.datetime.strptime(date_past, '%Y-%m-%d').date() == datetime.date.today(): print("Текущая дата")
     except: print("Не дата")
 
-#date_past = input("Введите дату: ")
-#datePastTrue(date_past)
+date_past = input("Введите дату: ")
+datePastTrue(date_past)
 
 
 #6.3. Дан некоторый список, например, вот такой: [123, 456, 789]
