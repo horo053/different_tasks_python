@@ -32,7 +32,6 @@ trianglePif(int1,int2,int3)
 
 print()
 # 5.3. Дано некоторое число: 35142. Отсортируйте цифры этого числа. В нашем случае должно получится следующее: 12345
-import datetime
 
 def sortInt(int4):
     int_str = str(int4)
