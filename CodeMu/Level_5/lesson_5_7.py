@@ -41,7 +41,6 @@ weekendDayInYear()
 
 #7.4. Дано некоторое число: 123456
 # Найдите сумму пар цифр этого числа. В нашем случае имеется ввиду следующее: 12 + 34 + 56
-import datetime
 def sumInt(num):
     sum = 0
     str_num = str(num)
