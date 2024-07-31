@@ -71,10 +71,8 @@ def is_password_good(password):
     else:
         return False
 
-# считываем данные
 txt = input()
 
-# вызываем функцию
 print(is_password_good(txt))
 
 
@@ -94,12 +92,9 @@ def is_one_away(word1, word2):
     else:
         return False
 
-
-# считываем данные
 txt1 = input()
 txt2 = input()
 
-# вызываем функцию
 print(is_one_away(txt1, txt2))
 
 
@@ -112,10 +107,8 @@ def is_palindrome(text):
     text = text.lower()
     return text == text[::-1]
 
-# считываем данные
 txt = input()
 
-# вызываем функцию
 print(is_palindrome(txt))
 
 
@@ -144,9 +137,6 @@ def is_valid_password(password):
         return count == 3
     return False
 
-
-# считываем данные
 psw = input()
 
-# вызываем функцию
 print(is_valid_password(psw))
