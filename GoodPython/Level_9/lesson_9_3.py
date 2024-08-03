@@ -41,3 +41,8 @@ print(lst2D)
 # Выводить на экран ничего не нужно, только преобразовать строку в кортеж с именем tp.
 tp = tuple(tuple(map(str, i.split("="))) for i in list(map(str, input().split())))
 print(tp)
+
+# ИЛИ без map
+n = input().split()
+tp = tuple(tuple(i.split('=')) for i in n)
+print(tp)
