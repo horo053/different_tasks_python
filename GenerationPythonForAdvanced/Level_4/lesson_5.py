@@ -143,3 +143,34 @@ print_mtrix_with_step(step)
 # 9. Магическим квадратом порядка n называется квадратная таблица размера n×n, составленная из всех чисел 1,2,3,…,n**2
 # так, что суммы по каждому столбцу, каждой строке и каждой из двух диагоналей равны между собой. Напишите программу,
 # которая проверяет, является ли заданная квадратная матрица магическим квадратом.
+# незаконченное решение
+n = int(input())
+lst = [list(map(int, input().split())) for _ in range(n)]
+sum_all = sum(lst[1])
+flag = True
+
+lst2 = [j for i in lst for j in i]
+lst2.sort()
+lst3 = [i for i in range(1, (n**2)+1)]
+
+if lst2 != lst3:
+    flag = False
+else:
+    for i in range(n):
+        sum_colum, sum_dp = 0, 0
+        sum_raw = sum(lst[i])
+        for j in range(n):
+            sum_colum += lst[i][j]
+            sum_dp += [i][n-1-i]
+        if (sum_colum != sum_all) or (sum_dp != sum_all) or (sum_raw != sum_all):
+            flag = False
+            break
+
+    sum_dg = 0
+    for i in range(n):
+        sum_dg += lst[i][i]
+    if sum_dg != sum_all:
+        flag = False
+
+if flag: print('YES')
+else: print('NO')
