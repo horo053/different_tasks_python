@@ -4,4 +4,4 @@
 - **GenerationPythonForBeginners** - https://stepik.org/course/58852/syllabus
 - **GenerationPythonForAdvanced** - https://stepik.org/course/68343/syllabus
 - **GrokkingAlgorithms** - Упражнения из книги "Грокаем алгоритмы" (автор: Адитья Бхаргава)
-- **PythonDeveloperS** - Курс от работодателя
+- **PythonDeveloperS** - Курс по основам Python
