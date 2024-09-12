@@ -53,3 +53,36 @@ print(*word, sep='')
 # 6. Для игры в бинго требуется карточка размером 5×5, содержащая различные (уникальные) целые числа от 1 до
 # 75 (включительно), при этом центральная клетка является пустой (она заполняется числом 0). Напишите программу,
 # которая с помощью модуля random генерирует и выводит случайную карточку для игры в бинго.
+num = random.sample(range(1, 76), 25)
+num[12] = 0
+for i in range(len(num)):
+    print(str(num[i]).ljust(3), end = '')
+    if i in [4, 9, 14, 19]:
+        print()
+
+
+# 8. Напишите программу, которая с помощью модуля random генерирует n паролей длиной m символов, состоящих из строчных
+# и прописных английских букв и цифр, кроме тех, которые легко перепутать между собой:
+# «l» (L маленькое);
+# «I» (i большое);
+# «1» (цифра);
+# «o» и «O» (маленькая и большая буквы);
+# «0» (цифра).
+s = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+n = int(input())
+m = int(input())
+lst = [[random.choice(s) for _ in range(m)] for _ in range(n)]
+for i in lst:
+    print(*i, sep='')
+
+# ИЛИ
+LETTER = ''.join((set(string.ascii_letters) | set(string.digits)) - set('lI1oO0'))
+
+def generate_password(length):
+    return ''.join(string.sample(LETTER, length))
+
+def generate_passwords(count, length):
+    return [generate_password(length) for _ in range(count)]
+
+n, m = int(input()), int(input())
+print(*generate_passwords(n, m), sep='\n')
