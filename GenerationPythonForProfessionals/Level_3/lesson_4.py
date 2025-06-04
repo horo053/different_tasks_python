@@ -22,24 +22,24 @@ print(days)
 # Формат выходных данных: Программа должна вывести предыдущую и следующую даты относительно введенной даты,
 # каждую на отдельной строке, в формате DD.MM.YYYY.
 # Примечание 1: Гарантируется, что у подаваемой даты есть предыдущая и следующая даты.
-# day, month, year = input().split('.')
-# my_date = date(int(year), int(month), int(day))
-# yesterday = (my_date - timedelta(days=1)).strftime('%d.%m.%Y')
-# tomorrow = (my_date + timedelta(days=1)).strftime('%d.%m.%Y')
-# print(yesterday, tomorrow, sep='\n')
-#
-# #ИЛИ
-# mask='%d.%m.%Y'
-# my_date=datetime.strptime(input(), mask)
+day, month, year = input().split('.')
+my_date = date(int(year), int(month), int(day))
+yesterday = (my_date - timedelta(days=1)).strftime('%d.%m.%Y')
+tomorrow = (my_date + timedelta(days=1)).strftime('%d.%m.%Y')
+print(yesterday, tomorrow, sep='\n')
+
+#ИЛИ
+mask='%d.%m.%Y'
+my_date=datetime.strptime(input(), mask)
 
 
 #4. Напишите программу, которая принимает на вход время и выводит целое количество секунд, прошедшее с начала суток.
 # Формат входных данных: На вход программе подается время в формате HH:MM:SS.
 # Формат выходных данных: Программа должна вывести целое количество секунд, прошедшее с начала суток.
 # Примечание 1. Началом суток считается момент времени, соответствующий 00:00:00.
-# hour, minut, sec = map(int, input().split(':'))
-# my_time = timedelta(hours=hour, minutes=minut, seconds=sec).seconds
-# print(my_time)
+hour, minut, sec = map(int, input().split(':'))
+my_time = timedelta(hours=hour, minutes=minut, seconds=sec).seconds
+print(my_time)
 
 
 #5. Часы показывают время в формате HH:MM:SS. На этих часах запустили таймер, который прозвенит через n секунд.
@@ -48,10 +48,10 @@ print(days)
 # следующей строке вводится целое неотрицательное число n — количество секунд, через которое должен прозвенеть таймер.
 # Формат выходных данных: Программа должна вывести время в формате HH:MM:SS, которое будет на часах,
 # когда прозвенит таймер.
-# hour, minut, sec = map(int, input().split(':'))
-# n = int(input())
-# my_time = (datetime(1,1,1, hour, minut, sec) + timedelta(seconds=n)).time()
-# print(my_time)
+hour, minut, sec = map(int, input().split(':'))
+n = int(input())
+my_time = (datetime(1,1,1, hour, minut, sec) + timedelta(seconds=n)).time()
+print(my_time)
 
 
 #6. Реализуйте функцию num_of_sundays(), которая принимает на вход один аргумент:
@@ -90,5 +90,35 @@ print(num_of_sundays_u(2022))
 day, month, year = input().split('.')
 my_date = date(int(year), int(month), int(day))
 for i in range(10):
-    d = my_date + timedelta(hours=(i*i+1)*24)
-    print(d)
+    print(my_date.strftime('%d.%m.%Y'))
+    my_date += timedelta(days=i+2)
+
+
+#8. Дана последовательность дат. Напишите программу, которая создает и выводит список, элементами которого являются
+# неотрицательные целые числа — количество дней между двумя соседними датами последовательности.
+dates = [datetime.strptime(x, '%d.%m.%Y') for x in input().split()]
+dif = [abs(dates[i] - dates[i+1]).days for i in range(len(dates) - 1)]
+print(dif)
+
+
+#9. Реализуйте функцию fill_up_missing_dates(), которая принимает на вход один аргумент:
+# dates — список строковых дат в формате DD.MM.YYYY
+# Функция должна возвращать список, в котором содержатся все даты из списка dates, расположенные в порядке
+# возрастания, а также все недостающие промежуточные даты.
+def fill_up_missing_dates(dates):
+    pattern = '%d.%m.%Y'
+    dates = [datetime.strptime(x, pattern) for x in dates]
+    start, end = min(dates), max(dates)
+    days = (end - start).days + 1
+    days_lst = [(start + timedelta(days=i)).strftime(pattern) for i in range(days)]
+    return days_lst
+
+
+#10. Репетитор по математике проводит занятия по 45 минут с перерывами по 10 минут.
+# Репетитор обозначает время начала рабочего дня и время окончания рабочего дня. Напишите программу,
+# которая генерирует и выводит расписание занятий.
+pattern = '%H:%M'
+start, end = [datetime.strptime(input(), pattern) for i in range(2)]
+while (start + timedelta(minutes=45)) <= end:
+    print(start.strftime(pattern), '-', (start + timedelta(minutes=45)).strftime(pattern))
+    start += timedelta(minutes=55)
