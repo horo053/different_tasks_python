@@ -60,29 +60,29 @@ print(andrew.strftime('%Y-%j'))   # выводим дату в формате YY
 
 
 #5. Напишите программу, которая принимает на вход две даты и выводит ту, что меньше.
-# year1, month1, day1 = input().split('-')
-# year2, month2, day2 = input().split('-')
-#
-# my_date1 = date(int(year1), int(month1), int(day1))
-# my_date2 = date(int(year2), int(month2), int(day2))
-#
-# min_date = min(my_date1, my_date2)
-# print(min_date.strftime('%d-%m (%Y)'))
-#
-# # ИЛИ
-# date1 = date.fromisoformat(input())
-# date2 = date.fromisoformat(input())
-#
-# print(min(date1, date2).strftime('%d-%m (%Y)'))
+year1, month1, day1 = input().split('-')
+year2, month2, day2 = input().split('-')
+
+my_date1 = date(int(year1), int(month1), int(day1))
+my_date2 = date(int(year2), int(month2), int(day2))
+
+min_date = min(my_date1, my_date2)
+print(min_date.strftime('%d-%m (%Y)'))
+
+# ИЛИ
+date1 = date.fromisoformat(input())
+date2 = date.fromisoformat(input())
+
+print(min(date1, date2).strftime('%d-%m (%Y)'))
 
 
 #6. Напишите программу, которая принимает на вход последовательность дат и выводит их в порядке неубывания.
-# n = int(input())
-# date_list = [input() for _ in range(n)]
-# date_list.sort()
-# for i in date_list:
-#     date_form = date.fromisoformat(i)
-#     print(date_form.strftime('%d/%m/%Y'))
+n = int(input())
+date_list = [input() for _ in range(n)]
+date_list.sort()
+for i in date_list:
+    date_form = date.fromisoformat(i)
+    print(date_form.strftime('%d/%m/%Y'))
 
 
 #7. Тимур считает дату «интересной», если её год совпадает с годом его рождения, а сумма номера месяца и
